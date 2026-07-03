@@ -24,10 +24,11 @@ director rankings, and profitability trends.
 ---
 
 ## Key Findings
-*(fill in once you've run the queries — same style as your VG Sales project)*
-- e.g. **Action** genre generates the highest average revenue despite not having the most releases
-- e.g. Median budgets have risen sharply since **2005**
-- ...
+- The **Animation** genre generates the highest average revenue despite not having the most releases
+- budgets have risen sharply since **1969**
+- The Top Director by Average Rating was **Hayao Miyazaki**
+- The actor pairs who have appeared together most frequently together were **Adam Sandler & Allen Covert**
+- **Avatar** was the most profitable movie
 
 ---
 
@@ -43,7 +44,9 @@ director rankings, and profitability trends.
 ## Visuals
 ![Top Genres by Revenue](visuals/top_genres_revenue.png)
 ![Top Directors by Rating](visuals/top_directors.png)
-![Most Profitable Movies](visuals/profitable_movies.png)
+![Most Profitable Movies](visuals/top_profitable_movies.png)
+![Budget-Revenue Trend](visuals/budget_revenue_trend.png)
+![Most Frequent Actor Pairs](most_actor_collaborations.png)
 
 ---
 
