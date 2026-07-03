@@ -35,9 +35,10 @@ director rankings, and profitability trends.
 ## SQL Concepts Practiced
 - Multi-table joins (`movies` ⨝ `credits`)
 - Parsing/flattening JSON columns (genres, cast, crew) into relational tables
-- Aggregate functions (`AVG`, `SUM`, `COUNT`) with `GROUP BY` / `HAVING`
-- Window functions for rankings
-- Handling dirty data (zero-value budgets/revenue as missing data)
+- Aggregate functions (`AVG`, `COUNT`) with `GROUP BY` / `HAVING`
+- Self-joins (actor collaboration pairs via `cast_members` joined to itself)
+- Row limiting with `TOP N`
+- Handling dirty data (excluding zero/near-zero budget and revenue values, filtering out low-sample outlier years)
 
 ---
 
@@ -51,18 +52,24 @@ director rankings, and profitability trends.
 ---
 
 ## How to Run
-1. Clone the repo
-   git clone https://github.com/codexyz1/tmdb-sql-project.git
+1. Install SQL Server 2025 Express (or any local SQL Server instance) and SSMS
 
-2. Install dependencies
+2. Clone the repo
+   git clone https://github.com/codexyz1/tmdb-sql-analysis.git
+
+3. Install dependencies
    pip install -r requirements.txt
 
-3. Load the data into SQLite
-   jupyter notebook notebooks/01_setup_load_data.ipynb
+4. Update the connection string in the notebooks to match your server instance
+   (default assumes localhost\SQLEXPRESS with Windows Authentication)
 
-4. Run SQL queries directly
+5. Run the notebooks in order:
+   - notebooks/setup_load_data.ipynb       (loads CSVs into SQL Server)
+   - notebooks/clean_flatten_json.ipynb    (flattens genres/cast/crew JSON columns)
+   - notebooks/analysis_queries.ipynb      (runs SQL queries + generates charts)
+
+6. Individual queries are also available to run directly in SSMS:
    sql/queries/*.sql
-   (or open notebooks/03_analysis_queries.ipynb for results + charts)
 
 ---
 
