@@ -1,0 +1,4 @@
+data/processed/tmdb.db
+.ipynb_checkpoints/
+__pycache__/
+.env
